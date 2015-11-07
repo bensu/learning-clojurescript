@@ -1,4 +1,4 @@
-(ns cljs_draw.util
+(ns cljs-draw.util
   (:require [goog.events :as events]
             [cljs.core.async :refer [<! chan timeout put!]]))
 

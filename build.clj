@@ -10,11 +10,15 @@
                    cljs.build.api/build))
 
 (build "src"
-       {:main 'cljs_draw.core
-        :output-to "resources/public/out/frontend.js"})
+       {:asset-path "out"
+        :output-to "resources/public/out/frontend.js"
+        :output-dir "resources/public/out"
+        :optimizations :none
+        :source-map true
+        :main 'cljs-draw.core})
 
 (if (= action "repl")
   (cljs.repl/repl (cljs.repl.browser/repl-env)
-                  :watch "01-pressure-draw"
-                  :output-dir "resources/public/out"
-                  :output-to "out/main.js"))
+                  :watch "src"
+                  :output-to "resources/public/out/frontend.js"
+                  :output-dir "resources/public/out"))

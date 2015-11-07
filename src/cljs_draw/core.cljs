@@ -3,7 +3,7 @@
             [cljs.core.async :as async
              :refer [<! >! chan dropping-buffer timeout put! close!
                      alts!]]
-            [cljs_draw.util :refer [listen get-from-storage]]
+            [cljs-draw.util :refer [listen get-from-storage]]
             [om.core :as om]
             [om.dom :as dom]
             [goog.color :as color]
@@ -18,7 +18,7 @@
             [thi.ng.geom.core.matrix :as mat :refer [M44]])
   (:require-macros [cljs.core.async.macros :refer [go go-loop]]))
 
-;;(defonce conn (repl/connect "http://localhost:9000/repl"))
+(defonce conn (repl/connect "http://localhost:9000/repl"))
 (enable-console-print!)
 
 ;; app state
