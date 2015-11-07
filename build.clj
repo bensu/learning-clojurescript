@@ -9,12 +9,12 @@
                    cljs.build.api/watch
                    cljs.build.api/build))
 
-(build "01-pressure-draw/cljs_draw"
+(build "src"
        {:main 'cljs_draw.core
-        :output-to "out/frontend.js"})
+        :output-to "resources/public/out/frontend.js"})
 
 (if (= action "repl")
   (cljs.repl/repl (cljs.repl.browser/repl-env)
                   :watch "01-pressure-draw"
-                  :output-dir "out"
+                  :output-dir "resources/public/out"
                   :output-to "out/main.js"))

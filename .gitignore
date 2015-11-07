@@ -1,2 +1,7 @@
 .repl*
 .DS_Store
+target
+out
+*.log
+resources/public/out
+
